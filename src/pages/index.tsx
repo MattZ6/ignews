@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
 import { stripe } from '../services/stripe';
@@ -26,7 +26,7 @@ export default function Home({ product }: IHomeProps) {
         <section className={styles.hero}>
           <span>👏 Hey, welcome!</span>
 
-          <h1>New about the <span>React</span> world.</h1>
+          <h1>News about the <span>React</span> world.</h1>
 
           <p>
             Get access to all the publications <br/>
@@ -42,10 +42,11 @@ export default function Home({ product }: IHomeProps) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps<IHomeProps> = async () => {
+export const getStaticProps: GetStaticProps<IHomeProps> = async () => {
   const price = await stripe.prices.retrieve('price_1IYgBSKa9duKxv20TJ1or6Wb');
 
   return {
+    revalidate: 60 * 60 * 24, // 24 hours
     props: {
       product: {
         priceId: price.id,
