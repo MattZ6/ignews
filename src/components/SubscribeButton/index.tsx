@@ -1,4 +1,5 @@
 import { useSession, signIn } from 'next-auth/client';
+import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 
 import { api } from '../../services/api';
@@ -12,11 +13,17 @@ interface ISubscribeButtonProps {
 
 export function SubscribeButton({}: ISubscribeButtonProps) {
   const [session] = useSession();
+  const router = useRouter();
 
   const handleSubscribe = useCallback(async () => {
     if (!session) {
       signIn('github');
 
+      return;
+    }
+
+    if (session.activeSubscription) {
+      router.push('/posts');
       return;
     }
 
