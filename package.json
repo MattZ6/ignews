@@ -1,12 +1,15 @@
 {
   "name": "ignews",
+  "description": "🔥 Blog sobre notícias do universo React, construído utilizando NextJS na trilha de React JS — Ignite",
   "version": "0.0.0",
   "private": true,
   "author": {
     "name": "Matheus felipe Zanin",
     "email": "matt_z6@hotmail.com",
-    "url": "https://github.com/mattz6"
+    "url": "https://github.com/MattZ6"
   },
+  "repository": "https://github.com/MattZ6/ignews",
+  "bugs": "https://github.com/MattZ6/ignews/issues",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
