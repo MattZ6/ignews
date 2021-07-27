@@ -3,6 +3,7 @@
   "description": "🔥 Blog sobre notícias do universo React, construído utilizando NextJS na trilha de React JS — Ignite",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
   "author": {
     "name": "Matheus felipe Zanin",
     "email": "matt_z6@hotmail.com",
