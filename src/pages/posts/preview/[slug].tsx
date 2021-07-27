@@ -92,6 +92,7 @@ export const getStaticProps: GetStaticProps<IPostPreviewProps> = async ({ params
   return {
     props: {
       post,
-    }
+    },
+    revalidate: 60 * 1 // 1hr
   }
 }
