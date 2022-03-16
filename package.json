@@ -17,7 +17,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@prismicio/client": "6.3.0",
+    "@prismicio/client": "6.4.1",
     "@stripe/stripe-js": "1.24.0",
     "axios": "0.26.1",
     "faunadb": "4.5.2",
