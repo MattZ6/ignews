@@ -34,7 +34,7 @@
     "@types/next-auth": "3.13.0",
     "@types/node": "16.11.27",
     "@types/prismic-dom": "2.1.1",
-    "@types/react": "18.0.5",
+    "@types/react": "18.0.8",
     "typescript": "4.6.3"
   }
 }
